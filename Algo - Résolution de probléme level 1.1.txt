@@ -1,0 +1,42 @@
+#Exercice 1:
+Ecrire un programme qui demande un nombre et lui afficher .
+
+reponse:
+Variables
+x : reel
+
+Debut
+x <-- Lire();
+
+Ecrire(x);
+Fin
+.................................................................................
+#Exercice 2:
+Ecrire un programme qui demande son prénom à l’utilisateur  et son âge et qui lui réponde par un charmant « Bonjour » suivi du prénom et son âge
+
+reponse:
+variables
+str : chaine de caractere;
+x : reel;
+
+Debut
+str <-- Lire("Ecrire ton prenom");
+x <-- Lire("Ecrire ton age");
+
+Ecrire ("Bonjour ", str, x);
+Fin
+.................................................................................
+#Exercice 3:
+Ecrire un programme qui demande son prénom à l'utilisateur, et qui lui réponde par un charmant « Bonjour » suivi du prénom. 
+machine : Bonjour, Marie Cunégonde ! ».
+
+reponse:
+Algorithme Bonjour_2
+
+Variables
+str : chaine de cararctere;
+
+Debut
+str <-- Lire("Ecrire ton prenom");
+Ecrire ( "Bonjour, ", str);
+Fin
