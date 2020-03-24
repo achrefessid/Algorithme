@@ -95,10 +95,10 @@ Create a function that returns the total number of parameters passed in.
 numberArgs("a", "b") ➞ 2
 numberArgs(10, 20, 30, 40, 50,70) ➞ 6
 
-function numArgs(A,B,C,D,E) { 
-  return numArgs.length;
+function numberArgs (){        
+  return arguments.length;
 }
-console.log(numArgs())
+console.log(numberArgs(7, 7, "aazk""));
 ............................................................................................................................................
 Exercice:
 Write two functions; 
@@ -119,10 +119,10 @@ Create a function that takes a character as argument then returns its ASCII valu
 ("m") ➞ 109
 ("\") ➞ 92
 
-function Ascii(character){
-  return character.charCodeAt()
+function ConvertToAsci(variable) {
+return variable.charCodeAt(2);
 }
-console.log(Ascii("A"))
+console.log(ConvertToAsci("AB"));
 ............................................................................................................................................
 Exercice:
 Create a function that takes a number as an argument and returns the amount of digits it has.
@@ -130,11 +130,10 @@ Create a function that takes a number as an argument and returns the amount of d
 (7154) ➞ 4
 (0) ➞ 1
 
-function numDigits(number){
-  let str = number.toString();
-  return str.length;
+let converToString = number.toString();
+return convertToString.length;
 }
-console.log(numDigits(945682));
+console.log(DigitNumber(210));
 
 
 
