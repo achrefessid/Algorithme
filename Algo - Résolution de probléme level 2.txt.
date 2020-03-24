@@ -1,0 +1,656 @@
+Exercise1:
+Ecrire un algorithme qui demande un mot à l’utilisateur et qui affiche à l’écran le nombre de lettres de ce mot.
+
+Exercise2:
+Ecrire un algorithme qui demande à l’utilisateur 3 chaînes de caractères et qui affiche à l’écran leurs concaténation
+
+Exercise3: 
+Ecrivez un algorithme qui demande une phrase à l’utilisateur. Celui-ci entrera ensuite le rang d’un caractère à supprimer, et la nouvelle phrase doit être affichée (on doit réellement supprimer le caractère dans la variable qui stocke la phrase, et pas uniquement à l’écran).
+Reponse :
+Il n'existe aucun moyen de supprimer directement un caractère d'une chaîne…
+autrement qu'en procédant par collage. Il faut donc concaténer ce qui se trouve à
+gauche du caractère à supprimer, avec ce qui se trouve à sa droite. Attention aux
+paramètres des fonctions Mid, ils n'ont rien d'évident !
+Variable Bla en Caractère
+Variables Nb, i, j en Entier
+Début
+Ecrire "Entrez une phrase : "
+Lire Bla
+Ecrire "Entrez le rang du caractère à supprimer : "
+Lire Nb
+L ← Len(Bla)
+Bla ← Mid(Bla, 1, Nb – 1) & Mid(Bla, Nb + 1, L – Nb)
+Ecrire "La nouvelle phrase est : ", Bla
+Fin
+
+
+
+
+
+Exercise4:
+Ecrire un algorithme qui demande à l’utilisateur d'écrire le mot Bonjour puis afficher le caractère “u” de mot “Bonjour” par leur index.
+
+Exercise5:
+Ecrire un algorithme qui lit un caractère au clavier puis affiche son prédécesseur, son successeur 
+
+Exercise6:
+Ecrire un algorithme qui lit un caractère au clavier puis affiche son équivalent en Majuscule
+
+Exercise7:
+Ecrire un algorithme qui demande à l’utilisateur de taper un valeur et tester si la valeur est paire ou impaire
+
+Exercise8:
+Ecrire un algorithme qui demande à l’utilisateur de taper 3 nombres et tester si l’un est la somme des 2 autres 
+
+Exercise9:
+Ecrire un algorithme qui demande un nombre à l’utilisateur, et l’informe ensuite si ce nombre est positif ou négatif (on laisse de côté le cas où le nombre vaut zéro).
+Reponse :
+Variable n en Entier
+Début
+Ecrire "Entrez un nombre : "
+Lire n
+Si n < 0 Alors
+ Ecrire "Ce nombre est négatif"
+SinonSi n = 0 Alors
+ Ecrire "Ce nombre est nul"
+Sinon
+ Ecrire "Ce nombre est positif"
+Finsi
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercise10:
+Ecrire un algorithme qui demande à l’utilisateur de taper deux nombres et affiche le plus grand des deux:
+Ecrire un algorithme qui demande l’âge d’un enfant à l’utilisateur. Ensuite, il l’informe de sa catégorie :
+•	"Poussin" de 6 à 7 ans
+•	"Pupille" de 8 à 9 ans
+•	"Minime" de 10 à 11 ans
+•	"Cadet" après 12 ans
+Reponse :
+Variable age en Entier
+Début
+Ecrire "Entrez l’âge de l’enfant : "
+Lire age
+Si age >= 12 Alors
+ Ecrire "Catégorie Cadet"
+SinonSi age >= 10 Alors
+ Ecrire "Catégorie Minime"
+SinonSi age >= 8 Alors
+ Ecrire "Catégorie Pupille"
+SinonSi age >= 6 Alors
+ Ecrire "Catégorie Poussin"
+Finsi
+Fin
+
+
+
+
+
+
+
+
+
+
+
+Exercise11:
+Ecrire un algorithme qui demande à l’utilisateur de taper la note d’un stagiaire et afficher apré sa mention:
+Note<10: Redoublé
+10<=Note<=12: Passable
+12<Note<=14: Assez Bien
+14<Note<=16: Bien
+16<Note : Très Bien
+
+Exercise12:
+Cet algorithme est destiné à prédire l'avenir, et il doit être infaillible !
+Il lira au clavier l’heure et les minutes, et il affichera l’heure qu’il sera une minute plus tard. Par exemple, si l'utilisateur tape 21 puis 32, l'algorithme doit répondre :
+"Dans une minute, il sera 21 heure(s) 33".
+NB : on suppose que l'utilisateur entre une heure valide. Pas besoin donc de la vérifier.
+
+Exercice13:
+Les habitants de Zorglub paient l’impôt selon les règles suivantes :
+•	les hommes de plus de 20 ans paient l’impôt
+•	les femmes paient l’impôt si elles ont entre 18 et 35 ans
+•	les autres ne paient pas d’impôt
+Le programme demandera donc l’âge et le sexe du Zorglubien, et se prononcera donc ensuite sur le fait que l’habitant est imposable.
+
+Exercice14:
+Ecrire un algorithme qui teste si une année est bissextile ou non.
+N.B.
+Une année est bissextile si elle est divisible par 4 et pas par 100 ou si elle est divisible par 400.
+
+Exercice15:
+On désire écrire un algorithme qui permet d’afficher le jour correspondant à un chiffre allant de 1 à 7 , entré au clavier.
+
+Exercice16:
+Ecrire un algorithme qui permet d’afficher la valeur absolue de la différence entre deux nombres réels saisis au clavier.
+|x-y|= x –y  si    x>y
+|x-y|= -(x –y)  si   x<y
+
+
+
+
+
+Exercice17:
+Ecrire un algorithme qui demande à l’utilisateur un nombre compris entre 1 et 3 jusqu’à ce que la réponse convienne.
+Reponse :
+Variable N en Entier
+Debut
+N ← 0
+Ecrire "Entrez un nombre entre 1 et 3"
+TantQue N < 1 ou N > 3
+ Lire N
+ Si N < 1 ou N > 3 Alors
+ Ecrire "Saisie erronée. Recommencez”
+ FinSi
+ FinTantQue
+Fin
+
+Exercice18:
+Ecrire un algorithme qui demande un nombre compris entre 10 et 20, jusqu’à ce que la réponse convienne. En cas de réponse supérieure à 20, on fera apparaître un message : « Plus petit ! », et inversement, « Plus grand ! » si le nombre est inférieur à 10.
+Reponse :
+Variable N en Entier
+Debut
+N ← 0
+Ecrire "Entrez un nombre entre 10 et 20"
+TantQue N < 10 ou N > 20
+ Lire N
+ Si N < 10 Alors
+ Ecrire "Plus grand !"
+ SinonSi N > 20 Alors
+ Ecrire "Plus petit !"
+ FinSi
+FinTantQue
+Fin
+
+Exercice19:
+Ecrire un algorithme qui demande un nombre de départ, et qui ensuite affiche les dix nombres suivants. Par exemple, si l'utilisateur entre le nombre 17, le programme affichera les nombres de 18 à 27.  en utilisant l'instruction Pour
+Reponse : 
+Variables N, i en Entier
+Debut
+Ecrire "Entrez un nombre : "
+Lire N
+Ecrire "Les 10 nombres suivants sont : "
+Pour i ← N + 1 à N + 10
+ Ecrire i
+i Suivant
+Fin
+Exercice20:
+Ecrire un algorithme qui demande un nombre de départ, et qui calcule la somme des entiers jusqu’à ce nombre. Par exemple, si l’on entre 5, le programme doit calculer
+1 + 2 + 3 + 4 + 5 = 15
+NB : on souhaite afficher uniquement le résultat, pas la décomposition du calcul.
+Reponse : 
+Variables N, i, Som en Entier
+Debut
+Ecrire "Entrez un nombre : "
+Lire N
+Som ← 0
+Pour i ← 1 à N
+ Som ← Som + i
+i Suivant
+Ecrire "La somme est : ", Som
+Fin
+
+Exercice21:
+Ecrire un algorithme qui demande un nombre de départ, et qui calcule sa factorielle.
+NB : la factorielle de 8, notée 8 !, vaut
+1 x 2 x 3 x 4 x 5 x 6 x 7 x 8
+Reponse : 
+Variables N, i, F en Entier
+Debut
+Ecrire "Entrez un nombre : "
+Lire N
+F ← 1
+Pour i ← 2 à N
+ F ← F * i
+i Suivant
+Ecrire "La factorielle est : ", F
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice22:
+Ecrire un algorithme qui demande successivement 20 nombres à l’utilisateur, et qui lui dise ensuite quel était le plus grand parmi ces 20 nombres :
+Entrez le nombre numéro 1 : 12
+Entrez le nombre numéro 2 : 14
+etc..
+Entrez le nombre numéro 20 : 6
+Le plus grand de ces nombres est  : 14
+Modifiez ensuite l’algorithme pour que le programme affiche de surcroît en quelle position avait été saisie ce nombre :
+C’était le nombre numéro 2
+Reponse : 
+Variables N, i, PG en Entier
+Debut
+PG ← 0
+Pour i ← 1 à 20
+ Ecrire "Entrez un nombre : "
+ Lire N
+ Si i = 1 ou N > PG Alors
+ PG ← N
+ FinSi
+i Suivant
+Ecrire "Le nombre le plus grand était : ", PG
+Fin
+
+En ligne 3, on peut mettre n’importe quoi dans PG, il suffit que cette variable soit
+affectée pour que le premier passage en ligne 7 ne provoque pas d'erreur.
+Pour la version améliorée, cela donne :
+
+Variables N, i, PG, IPG en Entier
+Debut
+PG ← 0
+Pour i ← 1 à 20
+ Ecrire "Entrez un nombre : "
+ Lire N
+ Si i = 1 ou N > PG Alors
+ PG ← N
+ IPG ← i
+ FinSi
+i Suivant
+Ecrire "Le nombre le plus grand était : ", PG
+Ecrire "Il a été saisi en position numéro ", IPG
+Fin
+
+
+
+
+
+
+
+Exercise23:
+Ecrire un algorithme qui lit les noms des athlètes désirant participer à un marathon et s’arrête lorsqu’il rencontre deux noms consécutifs identiques.
+L’algorithme doit afficher , à la fin , le nombre de participants.
+
+Exercice24:
+Pour avoir une idée sur le niveau des élèves d’une classe, on a décidé de calculer la moyenne  de la classe à partir des moyennes générales de tous les élèves qui sont au nombre de 30.
+         Moy =
+Ecrire un algorithme de résolution.
+
+Exercice25:
+Ecrire un algorithme qui permet de retrouver le maximum, le minimum ainsi que la somme d’une liste de nombres positifs saisis par l’utilisateur. La fin de la liste est indiquée par un nombre négatif. La longueur  de la liste n’est pas limitée.
+Exemple : si la liste des éléments est : 7   3   20     15    2      6    5   -1
+ Le maximum est 20  , le minimum est 2 en utilisant Tantque.
+
+Exercice26:
+Dans un cinéma , on désire calculer la moyenne  d’âges de personnes s’intéressant à voir un film particulier.
+Pour finir, l’utilisateur doit répondre par ‘N’ à la question posée par l’algorithme :
+‘’ Encore une autre personne (O/N) ? ’’
+Et on doit afficher la moyenne d’âges des personnes à l'écran.
+
+Exercice27:
+Ecrire un algorithme permettant  de saisir 5 réelles au clavier,les stocker dans un tableau, calculer leur somme et les afficher avec leur somme à l'écran.
+
+Exercice28: 
+Ecrire un algorithme permettant  de calculer la somme,produit et moyenne des  éléments d’un tableau.
+Reponse : 
+Tableau Truc(6) en Numérique
+Variable i en Numérique
+Debut
+Pour i ← 0 à 6
+ Truc(i) ← 0
+i Suivant
+Fin
+
+Exercice29:
+Ecrire un algorithme qui déclare et remplisse un tableau de 7 valeurs numériques en les mettant toutes à zéro.
+
+
+
+
+
+Exercice30: 
+Ecrire un algorithme qui déclare et remplisse un tableau contenant les six voyelles de l’alphabet latin.
+Reponse : 
+Tableau Truc(5) en Caractère
+Debut
+Truc(0) ← "a"
+Truc(1) ← "e"
+Truc(2) ← "i"
+Truc(3) ← "o"
+Truc(4) ← "u"
+Truc(5) ← "y"
+Fin
+
+Exercice31: 
+Ecrire un algorithme qui déclare un tableau de 9 notes, dont on fait ensuite saisir les valeurs par l’utilisateur
+Reponse : 
+Tableau Notes(8) en Numérique
+Variable i en Numérique
+Pour i ← 0 à 8
+ Ecrire "Entrez la note numéro ", i + 1
+ Lire Notes(i)
+i Suivant
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice32: 
+Que produit l’algorithme suivant ?
+Tableau Nb(5) en Entier
+Variable i en Entier
+Début
+Pour i ← 0 à 5
+  Nb(i) ← i * i
+i suivant
+Pour i ← 0 à 5
+  Ecrire Nb(i)
+i suivant
+Fin
+Reponse :
+Cet algorithme remplit un tableau avec six valeurs : 0, 1, 4, 9, 16, 25.
+Il les écrit ensuite à l’écran. Simplification :
+
+Tableau Nb(5) en Numérique
+Variable i en Numérique
+Début
+Pour i ← 0 à 5
+ Nb(i) ← i * i
+ Ecrire Nb(i)
+i Suivant
+Fin
+Exercice34: 
+Ecrivez la fin de l’algorithme 6.3 afin que le calcul de la moyenne des notes soit effectué et affiché à l’écran.
+Reponse :
+Variable S en Numérique
+Tableau Notes(8) en Numérique
+Debut
+s ← 0
+Pour i ← 0 à 8
+ Ecrire "Entrez la note n° ", i + 1
+ Lire Notes(i)
+ s ← s + Notes(i)
+i Suivant
+Ecrire "Moyenne :", s/9
+Fin
+
+
+
+
+
+
+
+Exercice35: 
+Ecrivez un algorithme permettant à l’utilisateur de saisir un nombre quelconque de valeurs, qui devront être stockées dans un tableau. L’utilisateur doit donc commencer par entrer le nombre de valeurs qu’il compte saisir. Il effectuera ensuite cette saisie. Enfin, une fois la saisie terminée, le programme affichera le nombre de valeurs négatives et le nombre de valeurs positives.
+Reponse :
+Variables Nb, Nbpos, Nbneg en Numérique
+Tableau T() en Numérique
+Debut
+Ecrire "Entrez le nombre de valeurs :"
+Lire Nb
+Redim T(Nb-1)
+Nbpos ← 0
+Nbneg ← 0
+Pour i ← 0 à Nb – 1
+ Ecrire "Entrez le nombre n° ", i + 1
+ Lire T(i)
+ Si T(i) > 0 alors
+ Nbpos ← Nbpos + 1
+ Sinon
+ Nbneg ← Nbneg + 1
+ Finsi
+i Suivant
+Ecrire "Nombre de valeurs positives : ", Nbpos
+Ecrire "Nombre de valeurs négatives : ", Nbneg
+Fin
+
+Exercice36: 
+Ecrivez un algorithme calculant la somme des valeurs d’un tableau (on suppose que le tableau a été préalablement saisi).
+Reponse :
+Variables i, Som, N en Numérique
+Tableau T() en Numérique
+Debut
+… (on ne programme pas la saisie du tableau, dont on suppose qu’il compte N éléments)
+Redim T(N-1)
+…
+Som ← 0
+Pour i ← 0 à N – 1
+ Som ← Som + T(i)
+i Suivant
+Ecrire "Somme des éléments du tableau : ", Som
+Fin
+
+
+
+
+
+Exercice37: 
+Ecrivez un algorithme constituant un tableau, à partir de deux tableaux de même longueur préalablement saisis. Le nouveau tableau sera la somme des éléments des deux tableaux de départ.
+Tableau 1 :
+4	8	7	9	1	5	4	6
+
+Tableau 2 :
+
+7	6	5	2	1	3	7	4
+
+Tableau 3:
+  
+11	14	12	11	2	8	11	10
+
+Reponse :
+Variables i, N en Numérique
+Tableaux T1(), T2(), T3() en Numérique
+Debut
+… (on suppose que T1 et T2 comptent N éléments, et qu’ils sont déjà saisis)
+Redim T3(N-1)
+…
+Pour i ← 0 à N – 1
+ T3(i) ← T1(i) + T2(i)
+i Suivant
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice38: 
+Toujours à partir de deux tableaux précédemment saisis, écrivez un algorithme qui calcule le schtroumpf des deux tableaux. Pour calculer le schtroumpf, il faut multiplier chaque élément du tableau 1 par chaque élément du tableau 2, et additionner le tout. Par exemple si l'on a :
+
+Tableau 1:
+
+4	8	7	12
+
+Tableau 2:
+
+3	6
+Le Schtroumpf sera : 
+3 * 4 + 3 * 8 + 3 * 7 + 3 * 12 + 6 * 4 + 6 * 8 + 6 * 7 + 6 * 12 = 279
+Reponse :
+Variables i, j, N1, N2, S en Numérique
+Tableaux T1(), T2() en Numérique
+Debut
+… On ne programme pas la saisie des tableaux T1 et T2.
+(On suppose que T1 possède N1 éléments, et que T2 en possède T2)
+…
+S ← 0
+Pour i ← 0 à N1 – 1
+ Pour j ← 0 à N2 – 1
+ S ← S + T1(i) * T2(j)
+ j Suivant
+i Suivant
+Ecrire "Le schtroumpf est : ", S
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice39: 
+Ecrivez un algorithme qui permette la saisie d’un nombre quelconque de valeurs, sur le principe de l’ex 6.8. Toutes les valeurs doivent être ensuite augmentées de 1, et le nouveau tableau sera affiché à l’écran
+Reponse :
+Variables Nb, i en Numérique
+Tableau T() en Numérique
+Debut
+Ecrire "Entrez le nombre de valeurs : "
+Lire Nb
+Redim T(Nb-1)
+Pour i ← 0 à Nb – 1
+ Ecrire "Entrez le nombre n° ", i + 1
+ Lire T(i)
+i Suivant
+Ecrire "Nouveau tableau : "
+Pour i ← 0 à Nb – 1
+ T(i) ← T(i) + 1
+ Ecrire T(i)
+i Suivant
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice40: 
+Ecrivez un algorithme permettant, toujours sur le même principe, à l’utilisateur de saisir un nombre déterminé de valeurs. Le programme, une fois la saisie terminée, renvoie la plus grande valeur en précisant quelle position elle occupe dans le tableau. On prendra soin d’effectuer la saisie dans un premier temps, et la recherche de la plus grande valeur du tableau dans un second temps.
+Reponse :
+Variables Nb, Posmaxi en Numérique
+Tableau T() en Numérique
+Ecrire "Entrez le nombre de valeurs :"
+Lire Nb
+Redim T(Nb-1)
+Pour i ← 0 à Nb – 1
+ Ecrire "Entrez le nombre n° ", i + 1
+ Lire T(i)
+i Suivant
+Posmaxi ← 0
+Pour i ← 0 à Nb – 1
+ Si T(i) > T(Posmaxi) alors
+ Posmaxi ← i
+ Finsi
+i Suivant
+Ecrire "Element le plus grand : ", T(Posmaxi)
+Ecrire "Position de cet élément : ", Posmaxi
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice41: 
+Toujours et encore sur le même principe, écrivez un algorithme permettant, à l’utilisateur de saisir les notes d'une classe. Le programme, une fois la saisie terminée, renvoie le nombre de ces notes supérieures à la moyenne de la classe.
+Reponse :
+Variables Nb, i, Som, Moy, Nbsup en Numérique
+Tableau T() en Numérique
+Debut
+Ecrire "Entrez le nombre de notes à saisir : "
+Lire Nb
+Redim T(Nb-1)
+Pour i ← 0 à Nb – 1
+ Ecrire "Entrez le nombre n° ", i + 1
+ Lire T(i)
+i Suivant
+Som ← 0
+Pour i ← 0 à Nb – 1
+ Som ← Som + T(i)
+i Suivant
+Moy ← Som / Nb
+NbSup ← 0
+Pour i ← 0 à Nb – 1
+ Si T(i) > Moy Alors
+ NbSup ← NbSup + 1
+ FinSi
+i Suivant
+Ecrire NbSup, " élèves dépassent la moyenne de la classe"
+Fin
+
