@@ -24,7 +24,7 @@ Exercice:
 Write a function that takes the height and the width of rectangle as arguments and returns its perimeter.
 
 function perimeter(width,height) { 
-return width + height + width + height;
+  return (width + height)*2;
 }
 console.log(perimeter(20,2));
 ............................................................................................................................................
@@ -48,37 +48,39 @@ Write a function that takes hours as argument  and converts its into seconds.
 howManySeconds(2) ➞ 7200
 
 function howManySeconds(hours) { 
-return Math.floor(hours * 60);
+return Math.floor(hours * 3600);
 }
-console.log(howManySeconds(60));
+console.log(howManySeconds(5));
 ............................................................................................................................................
 Exercice:
 Write a function that takes two arguments (hours, minutes) and converts them into seconds.
 function howManySeconds(hours,minutes) { 
 return Math.floor(hours * 60) + (minutes * 60);
 }
-console.log(howManySeconds(60, 60));
+console.log(howManySeconds(1, 30));
 ............................................................................................................................................
 Exercice: **
 Create a function that takes a name as argument and returns  a greeting in the form of a string → "Hello name!".
 Don't forget the exclamation mark!
 sayHello("Simplon") ➞ "Hello Simplon!"
 function sayHello(name) { 
-return 
+  return ("Hello " + name + "!");
 }
-............................................................................................................................................
+console.log(sayHello("Achref"))
+.......................................................................................................................................
 Exercice:
 Create a function that  takes a string as argument and returns the length of this string.
 function StrLength(string) { 
 return string.length;
 }
+console.log(StrLength("Achref"))
 ............................................................................................................................................
 Exercice:
 Create a function that takes two strings as arguments, firstName and lastName, and returns a single string in the format "last, first".
 function LastFirst(first, last) { 
 return last + " " + first;
 }
-console.log(LastFirst("Achref, Essid"));
+console.log(LastFirst("Achref", "Essid"));
 ............................................................................................................................................
 Exercice:
 Create a function that takes a number as an argument, increments the number by +1 and returns the result.
@@ -93,28 +95,34 @@ Create a function that returns the total number of parameters passed in.
 numberArgs("a", "b") ➞ 2
 numberArgs(10, 20, 30, 40, 50,70) ➞ 6
 
-function numArgs() { 
-return 
+function numArgs(A,B,C,D,E) { 
+  return numArgs.length;
 }
-coxnsole.log(numberArgs());
+console.log(numArgs())
 ............................................................................................................................................
 Exercice:
 Write two functions; 
 the first one takes a string as argument and returns toInt("5") ➞ 5
 the second function takes a number as argument and returns toStr(100) ➞ "100"
-function numArgs("code") { 
-return toInt("5") ➞ 5
+function toInt(str) { 
+  return parseInt(str) 
 }
-function numArgs(50) { 
-return toStr(100) 
+function toStr(num){
+  return num.toString();
 }
+console.log(toInt("123"));
+console.log(toStr(9562));
 ............................................................................................................................................
 Exercice:
 Create a function that takes a character as argument then returns its ASCII value.
-
 ("A") ➞ 65
 ("m") ➞ 109
 ("\") ➞ 92
+
+function Ascii(character){
+  return character.charCodeAt()
+}
+console.log(Ascii("A"))
 ............................................................................................................................................
 Exercice:
 Create a function that takes a number as an argument and returns the amount of digits it has.
@@ -122,12 +130,11 @@ Create a function that takes a number as an argument and returns the amount of d
 (7154) ➞ 4
 (0) ➞ 1
 
-fonction amount(number) {
-return num;
+function numDigits(number){
+  let str = number.toString();
+  return str.length;
 }
-amount(123,
-
-
+console.log(numDigits(945682));
 
 
 
