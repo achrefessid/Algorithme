@@ -97,7 +97,7 @@ reponse : Reference error
 ----------------------------------------------------------------------------------------------------------------
 # Q15 How to declare a string variable ?
 
-.A :  let name = " Mouna"
+.A :  let name = " Mouna";            vrai
 .B :  let name= (" Mouna")
 .C :   let name = Mouna
 .D :  var name = "Mouna";             vrai
