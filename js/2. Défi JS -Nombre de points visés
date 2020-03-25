@@ -135,7 +135,6 @@ return convertToString.length;
 }
 console.log(DigitNumber(210));
 
-2. Défi JS -Nombre de points visés
 
 
 
