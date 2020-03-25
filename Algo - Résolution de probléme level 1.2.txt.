@@ -6,12 +6,12 @@ A ← 1
 B ← A + 3
 A ← 3
 Fin
-…………………………………………….
+reponse:
 La valeur des variables est :
 A = 1      B = ?
 A = 1      B = 4
 A = 3      B = 4
-
+........................................................................................................................
 Exercice 2:
 Quelles seront les valeurs des variables A, B et C après exécution des instructions suivantes ?
 Variables A, B, C en Entier
@@ -22,14 +22,14 @@ C ← A + B
 A ← 2
 C ← B – A
 Fin
-……………………………………………..
+reponse:
 La valeur des variables est 
 A = 5      B = ?      C = ?
 A = 5      B = 3      C = ?
 A = 5      B = 3      C = 8
 A = 2      B = 3      C = 8
 A = 2      B = 3      C = 1
-
+........................................................................................................................
 Exercice 3:
 Que produit l’algorithme suivant ?
 Variables A, B, C en Caractères
@@ -38,15 +38,12 @@ A ← "423"
 B ← "12"
 C ← A + B
 Fin 
-………………………………………..
+reponse:
 Il ne peut produire qu’une erreur d’exécution, puisqu’on ne peut pas additionner descaractères.
-
-
-
-
+........................................................................................................................
 Exercice  4:
 Ecrire un algorithme qui demande à l’utilisateur de saisir un entier et un réel et un caractère et les affiche dans un ordre inverse du saisi.
-……………………………………………..
+reponse:
 Algorithme Ordre_Inverse
 	Variables
 	A : entier;
@@ -58,9 +55,10 @@ Algorithme Ordre_Inverse
 	str <-- Lire("Donner un caractere");
 	Ecrire( str, B, A);
 	Fin
+........................................................................................................................
 Exercice 5:
 Ecrire un algorithme qui lit deux entiers au clavier et qui affiche ensuite leur somme.
-……………………………………………..
+reponse:
 Variables
 	A, B, C : Entiers;
 	Debut
@@ -69,32 +67,21 @@ Variables
 	C <-- A + B;
 	Ecrire(C);
 	Fi
+........................................................................................................................	
 Exercice 6:
 Ecrire un algorithm qui lit deux entiers au clavier et qui affiche ensuite leur leur produit. 
 Variables
 A, B, C : Entiers;
-
 Debut
 A <-- Lire("Donner Un Entier");
 B <-- Lire("Donner Un Autre Entier");
 C <-- A * B;
 Ecrire(C);
 Fin
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-
+........................................................................................................................
 Exercice 7:
 Ecrire un algorithm qui lit deux entiers au clavier et qui affiche ensuite leur somme et leur produit.
-……………………………………………..
+reponse:
 Algorithme Som_Prod
 Variables
                a, b, s, p :Entier
@@ -106,24 +93,22 @@ Début
       Ecrire(«Somme = »  ,s)
       Ecrire(«Produit = »,p)
 Fin.
-
+........................................................................................................................
 Exercice 8:
 Ecrire un algorithme qui demande de l’utilisateur la longueur et la largeur d’un rectangle puis calcule et affiche la périmètre de ce rectangle.
-……………………………………………..
+reponse:
 Variables 
 	A, B, C: reels
-	
-
 	Debut
 	A <-- Lire("Donner la longueur du rectangle");
 	B <-- Lire("Donner la largeur du rectangle");
 	C <-- (A + B)*2;
 	Ecrire ("La perimetre du rectangle est: ", C);
 	Fin
-
+........................................................................................................................
 Exercice 9:
 Ecrire un algorithme qui demande un nombre à l’utilisateur,puis qui calcule et affiche le carré de ce nombre.
-……………………………………………..
+reponse:
 Variables nb, carr en Entier
 Début
 Ecrire "Entrez un nombre :"
@@ -134,60 +119,48 @@ Fin
 En fait, on pourrait tout aussi bien économiser la variable carr en remplaçant les deuxavant-dernières lignes par :
 Ecrire "Son carré est : ", nb*nb
 C'est une question de style ; dans un cas, on privilégie la lisibilité de l'algorithme, dansl'autre, on privilégie l'économie d'une variable
-
-
-
+........................................................................................................................
 Exercice 10:
 Ecrire un algorithme qui demande de l’utilisateur la Base et l’hauteur d’un triangle puis calcule et affiche la surface de ce triangle.
-……………………………………………………..
+reponse:
 Variables 
 	B, H, S : reels;
-	
 	Debut
 	B <-- Lire("Donner la base du triangle");
 	H <-- Lire("Donner l'hauteur du triangle");
 	S <-- (B * H)/2;
 	Ecrire("La surface du triangle est :", S);
 	Fin
-
+........................................................................................................................
 Exercice 11:
 Ecrire un programme qui permet de calculer et d’afficher la moyenne en informatique d’un élève.
-……………………………………………………..
+reponse:
 Variables
 	N1, N2 M: reel;
-	
 	Debut
 	N1 <-- Lire("Donner la note de controle");
 	N2 <-- Lire("Donner la note de synthese");
 	M <-- (N1 + N2)/2;
 	Ecrire("Votre moyenne en informatique est: ", M);
 	Fin
-
+........................................................................................................................
 Exercice 12:
 On dispose de trois variables A, B et C. Ecrivez un algorithme transférant à B la valeur de A, à C la valeur de B et à A la valeur de C.
-……………………………………………………..
+reponse:
 Variables
 	N1, N2 M: reel;
-	
 	Debut
 	N1 <-- Lire("Donner la note de controle");
 	N2 <-- Lire("Donner la note de synthese");
 	M <-- (N1 + N2)/2;
 	Ecrire("Votre moyenne en informatique est: ", M);
 	Fin
-
-
-
-
-
+........................................................................................................................
 Exercice 13:
 Ecrire un algorithme qui permuter les valeurs de deux variables sachant que A←7 et B←2.
-
-……………………………………………………..
+reponse:
 Variables
 	A, B, C : reel;
-	
-
 	Debut
 	A <-- 7;
 	B <-- 2;
@@ -196,12 +169,12 @@ Variables
 	B <-- C;
 	Ecrire (A, B);
 	Fin
-
+........................................................................................................................
 Exercice 14:
 Ecrire l'algorithme et le programme pascal d'un programme qui permet de saisir un entier de 3 chiffres puis affiche la somme de ces 3 chiffres.
 Exemple : pour 145  S=1+4+5=10
 (en utilisant (mod et div))
-……………………………..
+reponse:
 Variables
 	S, A : entier;
 	Debut
@@ -209,18 +182,10 @@ Variables
 	S <-- (A div 100) + ((A mod 100)div 10) + A mod 10;
 	Ecrire(S);
 	Fin
-
-
-
-
-
-
-
-
-
+........................................................................................................................
 Exercise 15:
 Ecrire un algorithme qui lit le prix HT(hors Taxe) d’un article, le nombre d’article et le taux de TVA et qui fournit le prix total TTC correspondant faire en sorte que des libelle apparaissent clairement
-………………………………………………………..
+reponse:
 Variables nb, pht, ttva, pttc en Numérique
 Début
 Ecrire "Entrez le prix hors taxes :"
