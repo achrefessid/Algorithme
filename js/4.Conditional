@@ -148,12 +148,18 @@ return num % 2 ? "odd" : "even";
 }
 console.log(isEvenOrOdd(3));
 ........................................................................................................................................
-Exercice11: ***
+Exercice11: 
 Write a function that validates whether two strings are identical. Make it case insensitive.
 match(“HELLO WORLD”, ”hello world”) → true
 match("mask", "mAskinG") ➞ false
 
 methode1:
+function match(str1, str2) {
+return (str1.toUpperCase() === str2.toUpperCase()) ? true : false;
+}
+console.log(match("Hello World", "hello world"));
+
+methode2:
 function match(str1,str2) { 
 i(str.length===str2.length) {
 return true
@@ -162,7 +168,7 @@ return false
 }
 console.log(match(("hello world","HELLO WORLD"));
 
-methode2:
+methode3:
 function match(str1,str2) { 
 if(str.toLowerCase===str2.toLowerCase)
 return true
@@ -170,15 +176,8 @@ else
 return false
 }
 console.log(match(("hello world","HELLO WORLD"));
-
-
-methode3:
-function match(str1, str2) {
-return (str1.toUpperCase() === str2.toUpperCase()) ? true : false;
-}
-console.log(match("hey", "HEy"));
 ........................................................................................................................................
-Exercice12: ***
+Exercice12: 
 Create a function that takes a string as argument and returns "upper" if all the letters in a word are uppercase, "lower" if lowercase and "mixed" for any mix of the two.
 getCase("javascript..") ➞ "lower"
 getCase("SHOUT!") ➞ "upper"
