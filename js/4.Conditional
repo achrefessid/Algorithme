@@ -191,13 +191,13 @@ return "lower"
 else
 return "mixed"
 }
-console.log(getCase("HQLMj"))
+console.log(getCase("SHOUT!"))
 
 methode2:
 function getCase(str) { 
 return str=str.toUpperCase()? "Upper :str==str.toLowerCase()? "lower" :"mixte"
 }
-console.log(getCase("HQLMj"))
+console.log(getCase("SHOUT!"))
 ....
 == :type Like some.
 === :type and valeur Like some.
@@ -218,8 +218,9 @@ AlphabetSoup("javascript") ➞ "aacijprstv"
 AlphabetSoup(“simplon”) ➞”ilmnops”
 
 function AlphabetSoup(str) {
-return str.split('').sort
+return str.split('').sort().join('');
 }
+console.log(AlphabetSoup("simplon"));
 ........................................................................................................................................
 Exercice15:
 Create a function that returns true if an input string contains only uppercase or only lowercase letters.
