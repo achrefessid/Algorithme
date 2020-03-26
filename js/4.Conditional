@@ -1,1 +1,282 @@
+Exercice1:
+Create a function that takes two numbers,and returns true if the sum of both numbers is less than 100. Otherwise return false.
+sumOfNumbers(10,20)➞ true
+//10+20=40<100
+ 
+function sumNumber(num1,num2) { 
+if(num1+num2<100) {
+return true
+else 
+return false
+}
+console.log(sumNumber(10,20));
+........................................................................................................................................
+Exercice2: 
+Create a function that takes two numbers and returns true when num1 is equal to num2; otherwise return false
+isEqual(1,7)➞false
+isEqual(100,100)➞true
+
+function isEqual(num1,num2) { 
+if(num1 == num2) {
+return "true"
+} else {
+return "false"
+}
+}
+isEqual(1,7);
+........................................................................................................................................
+Exercice3:
+Create a function that takes in three arguments (a, b, c) and returns true if a * b > c; otherwise return false.
+ifOneIsSum(1,2,3)➞ true
+ifOneIsSum(0,2,5)➞ false
+
+function ifOneIsSum(num1, num2, num3) {
+if (num1 === (num2 + num3) || num2 === (num1 + num3) || num3 === (num1 + num2))
+return true;
+else
+return false;
+}
+console.log(ifOneIsSum(1, 2, 3));
+........................................................................................................................................
+Exercice4: **
+Create a function  that takes a string as argument and returns true if a string is empty and false otherwise.
+isEmpty(“ ”)➞ true
+isEmpty(“Chaima”)➞ false
+
+methode1:
+function isEmpty(str) {
+if (str.length === 0)
+return true;
+else
+return false;
+}
+console.log(isEmpty(""))
+
+methode1:
+function isEmpty(str) { 
+return str.length == 0 ? true;false;
+}
+console.log(isEmpty("uhouy"));
+........................................................................................................................................
+Exercice5:
+Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+isEqualZero (2)➞ false
+isEqualZero (0)➞ true
+isEqualZero (-52)➞ true
+
+function isEqualZero(num) { 
+if (num<=0)
+return true 
+else
+return false 
+}
+console.log(isEqualZero(-52))
+........................................................................................................................................
+Exercice6:
+Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
+isDevisible (500)➞ true
+isDevisible (2)➞ false
+
+function isDevisible(num) {
+return num % 100 === 0 ? true : false;
+}
+console.log(isDevisible(500))
+........................................................................................................................................
+Exercice7: ***
+Create a function that takes two strings as arguments and returns true if the total number of characters in the first string is equal to the total number of characters in the second string.Otherwise return false.
+isEqualStr (“ Simplon”,”tunis ”)➞ false
+isEqualStr (“CA”,”FS”)➞ true
+
+function isEqualStr(str1, str2) {
+return str1.length === str2.length;
+}
+console.log(isEqualStr("CA", "FS"));
+........................................................................................................................................
+Exercice8:
+Create a function that takes two numbers, a and b, return true if a can be divided evenly by b , return false otherwise.
+oneDevideByTwo(9,3)➞true
+oneDevideByTwo(10,2)➞true
+oneDevideByTwo(13,2)➞false
+
+function isDevideBy(num1, num2) {
+return num1 % num2 === 0 ? true : false;
+}
+console.log(isDevideBy(9, 3));
+........................................................................................................................................
+Exercice9:
+Create a function that takes in a mood and return a sentence in the following format: "Today, I am feeling {mood}". 
+However, if no argument is passed, return "Today, I am feeling neuter".
+moodToday("happy") ➞ "Today, I am feeling happy"
+moodToday( ) ➞ "Today, I am feeling neuter"
+
+methode1:
+function moodToday(mood) { 
+if(mood != undefined)
+return "Today, I am felling" + mood
+else
+return "Today, I am feeling neuter"
+}
+console.log(moodToday("happy"));
+
+methode2:
+function moodToday(mood) { 
+let str =""
+if(mood!=undefined)
+return str+= "Today, I am felling " +mood
+else
+return "Today, I am feeling neuter"
+}
+console.log(moodToday("happy"))
+
+methode3:
+function moodToday(mood) { 
+if(mood != undefined) {
+return 'Today, I am feeling ${mood}'
+} else {
+return "Toady, I am feeling neuter"
+}
+console.log(moodToday("happy"));
+........................................................................................................................................
+Exercice10:
+Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers.
+isEvenOrOdd(3) ➞ "odd"
+isEvenOrOdd(146) ➞ "even"
+isEvenOrOdd(19) ➞ "odd"
+
+function isEvenOrOdd(num) {
+return num % 2 ? "odd" : "even";
+}
+console.log(isEvenOrOdd(3));
+........................................................................................................................................
+Exercice11: ***
+Write a function that validates whether two strings are identical. Make it case insensitive.
+match(“HELLO WORLD”, ”hello world”) → true
+match("mask", "mAskinG") ➞ false
+
+methode1:
+function match(str1,str2) { 
+i(str.length===str2.length) {
+return true
+} else {
+return false
+}
+console.log(match(("hello world","HELLO WORLD"));
+
+methode2:
+function match(str1,str2) { 
+if(str.toLowerCase===str2.toLowerCase)
+return true
+else 
+return false
+}
+console.log(match(("hello world","HELLO WORLD"));
+
+
+methode3:
+function match(str1, str2) {
+return (str1.toUpperCase() === str2.toUpperCase()) ? true : false;
+}
+console.log(match("hey", "HEy"));
+........................................................................................................................................
+Exercice12: ***
+Create a function that takes a string as argument and returns "upper" if all the letters in a word are uppercase, "lower" if lowercase and "mixed" for any mix of the two.
+getCase("javascript..") ➞ "lower"
+getCase("SHOUT!") ➞ "upper"
+
+methode1:
+function getCase(str) {
+if (str === str.toUpperCase())
+return "upper";
+else if (str === str.toLowerCase())
+return "lower"
+else
+return "mixed"
+}
+console.log(getCase("HQLMj"))
+
+methode2:
+function getCase(str) { 
+return str=str.toUpperCase()? "Upper :str==str.toLowerCase()? "lower" :"mixte"
+}
+console.log(getCase("HQLMj"))
+....
+== :type Like some.
+=== :type and valeur Like some.
+........................................................................................................................................
+Exercice13:
+Create a function that takes  a string as argument (of a person’s first and last name) and returns a string with the first and last name swapped.
+swapName("Ada Lovelace") ➞ "Lovelace Ada"
+swapName(“Alan Turing”)➞  “Turing Alan”
+
+function swappName(Name, LastName) {
+    return `${LastName} ${Name}`
+}
+console.log(swappName("Ada", "Lovelace"))
+........................................................................................................................................
+Exercice14:
+Create a function that takes a string and returns a string with its letters in alphabetical order.
+AlphabetSoup("javascript") ➞ "aacijprstv"
+AlphabetSoup(“simplon”) ➞”ilmnops”
+
+function AlphabetSoup(str) {
+return str.split('').sort
+}
+........................................................................................................................................
+Exercice15:
+Create a function that returns true if an input string contains only uppercase or only lowercase letters.
+onlyCase("good") ➞ true
+onlyCase("GOOD") ➞ true
+onlyCase("SimpLoN") ➞ false
+
+function onlyCase(str) {
+if (str === str.toUpperCase() || str === str.toLowerCase())
+return true;
+else
+return false;
+}
+console.log(onlyCase("SimploN"))
+........................................................................................................................................
+Exercice16:
+Create a function that takes two strings as arguments and returns true if the first string ends with the second string; otherwise return false.
+checkEnding("abc", "bc") ➞ true
+checkEnding("samplonien", "zi") ➞ false
+
+function checkEnding(str1, str2) {
+if (str1.includes(str2))
+return true;
+else
+return false;
+}
+console.log(checkEnding("abc", "bc"))
+........................................................................................................................................
+Exercice17:
+Create a function that takes a number as argument and returns the incrementing (+1) for each odd number and decrementing (-1) for each even number.
+incrementOrDecrement(5) ➞4
+incrementOrDecrement(2) ➞3
+
+function incrementOrDecrement(num) {
+return num % 2 ? (num - 1) : (num + 1);
+}
+console.log(incrementOrDecrement(2))
+........................................................................................................................................
+Exercice18:
+Create a function that takes two arguments and returns the smaller number.Numbers will be represented as strings, and your output should also be a string.
+
+toString("21", "100") ➞ "21"
+toString("200", "80") ➞ "80"
+
+function toString(num1, num2) {
+if (Number(num1) < Number(num2))
+return num1.toString();
+else
+return num2.toString();
+}
+console.log(toString("200", "80"))
+........................................................................................................................................
+/*
+function Ternary(name){
+return name.length >0 && " hi"
+}
+console.log(Ternary("lion"))
+*/
 
