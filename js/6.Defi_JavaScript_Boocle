@@ -96,8 +96,6 @@ function getMultipliedArr(array) {
     return array.map(
 const e5dem = (x) => {
 return x*2 
-
-.map : parmetere mté3éha ta5o function
 ..........................................................................................................................                                                              
 Exercice7:
 Create a function that takes as argument an array of words and transforms it into an array of each word's length.
