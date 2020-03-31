@@ -1,1 +1,431 @@
+Exercice1:*
+Create a function that takes a number as an argument. Add all the numbers from 1 to the number you passed to the function. 
+For example, if the input is 5 then your function should return 15 because 1 + 2 + 3 + 4 +5 = 15.
+sumNumber(5)➞1+2+3+4+5=15
+sumNumber(4)➞1+2+3+4=10
+.......................
+    function sumNumber(num) {
+        var sum = 0;
+        for (var i = 0; i <= num; i++){
+            sum += i;
+        }
+        return sum;
+    }
+.......................
+const addUp= (num) => {
+  let base = 0;
+  let sum = 0;
+  while (base <= num){
+    sum += base;
+    base++
+  }
+  return sum;
+};
+..........................................................................................................................
+Exercice2:
+Write a function that takes an array as an argument and returns the reversion of this array.
+reverse([1, 2, 3, 4]) ➞ [4, 3, 2, 1]
+reverse([9, 9, 2, 3, 4]) ➞ [4, 3, 2, 9, 9]
+reverse([ ]) ➞ [ ]
+
+    function reverse(array) {
+        return array.reverse()
+    }
+console.log(reverse([21, 56, 0, 1]))
+..........................................................................................................................
+Exercice3:*
+Create a function that accepts an array and returns the last item in the array.
+getLastItem([0, 5, 6]) ➞ 6
+getLastItem(["HTML", "CSS", "javascript"]) ➞ "javascript"
+
+function getLastItem(array) { 
+     return array[array.length -1];
+return 
+}
+.................
+const getLastItem = (arr) => {
+  return arr[arr.length -1];
+};
+console.log(getLastItem([0, 5, 6]));
+..........................................................................................................................
+Exercice4:
+Create a function that takes two arrays as arguments and returns the concatenation of two integer arrays.
+concat([0, 10, 6], [900, 5, 60]) ➞ [0, 10, 6, 900, 5, 60]
+
+    function concat(array1, array2) {
+        for (let i = 0; i < array2.length; i++) {
+            array1.push(array2[i]);
+        }
+        return array1;
+    }
+console.log(concat([1, 2, 3], [7, 8, 9]))
+..........................................................................................................................                                            
+Exercice5:
+Create a function that takes an array and an item as arguments and return the index of item.If the item is not present, return -1
+search([1, 5, 3], 3) ➞ 2
+search([1, 2, 3], 4) ➞ -1
+
+function search(arr, item) {
+   return arr.indexOf(item)
+}
+console.log(search([1, 5, 3], 3)); //2
+search([1, 2, 3], 4) //-1
+.............
+const search = (arr, num) => arr.indexOf(num);
+..........................................................................................................................
+Exercice6:
+Create a function that takes an array with numbers and return an array with the elements multiplied by two.
+getMultipliedArr([4, 5, 3]) ➞ [8, 10, 6]
+getMultipliedArr([1, 2, 6]) ➞ [2, 4, 12]
+                                                 
+function getMultipliedArr(array) { 
+return array.map(el => el*2)                   
+}
+console.log(getMultipliedArr([4, 5, 3]));
+console.log(getMultipliedArr([1, 2, 6]));
+........................
+function getMultipliedArr(array) { 
+    return array.map(
+      function e5dem (x){
+     return x*2
+  }                 
+}
+}
+........................
+function getMultipliedArr(array) { 
+    return array.map(
+const e5dem = (x) => {
+return x*2 
+
+.map : parmetere mté3éha ta5o function
+..........................................................................................................................                                                              
+Exercice7:
+Create a function that takes as argument an array of words and transforms it into an array of each word's length.
+wordLengths(["simplon", "Tunis"]) ➞ [7, 5]
+                                                          
+function wordLengths(array) { 
+return array.map(el=>el.length)  
+}
+..........................................................................................................................                                                              
+Exercice8:
+Create a function that takes an array and returns the sum of all numbers in the array.
+sum([1, 8, 2]) ➞ 11
+
+    function sum(array) {
+        let s = 0;
+        for (let i = 0; i < array.length; i++) {
+            s += array[i]
+        }
+        return s
+    }
+console.log(sum([12, 8, 20]))
+..........................................................................................................................
+Exercice9:
+Create a function that takes an array of numbers and returns only the even values.
+noOdds([1, 2, 3, 4, 5, 6, 7, 8]) ➞ [2, 4, 6, 8]
+noOdds([3, 6, 8, 9, 2, 1, 4, 5]) ➞ [6, 8, 2, 4]
+
+function noOdds(array) { 
+        return array.filter(x=> %2 !==0);   
+}
+console.log(noOdds([1, 2, 3, 4, 5, 6, 7, 8]));
+..........................................................................................................................
+Exercice10:
+Create a function that takes an array of numbers.and returns the largest number in the array.
+findLargestNum([4, 5, 1, 3]) ➞ 5
+findLargestNum([300, 200, 600, 150]) ➞ 600
+findLargestNum([1000, 1001, 857, 1]) ➞ 1001
+
+function findLargestNum(array) { 
+   return Math.max(...array)  
+}
+...........................
+const  diffMaxMin = (array)  => Math.max(...array) 
+..........................................................................................................................
+Exercice11:
+Create a function that takes an array of numbers.and returns the smaller number in the array.
+findSmallerNum([1, 6, 5, -213]) ➞ -213
+findSmallerNum([8, 7, 2, 1]) ➞ 1
+
+    function findSmallerNum(array) {
+        let Min = 100000000;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] < Min) {
+                Min = array[i];
+            }
+        }
+        return Min;
+    }
+..........................................................................................................................
+Exercice12:
+Create a function that takes an array of numbers as argument and return the first and last elements as a new array.
+firstLast([5, 10, 15, 20, 25]) ➞ [5, 25]
+firstLast([3, 100, 10, 21, 27]) ➞ [3, 100]
+                                                       
+    function firstLast(array) {
+        return arr2 = [array[0], array[array.length - 1]];
+    }
+console.log(firstLast([1, 128, 98962, 956, 9, 56, 95, 6]))
+..........................................................................................................................
+Exercice13:
+Create a function that takes an array and returns the difference between the biggest and smallest numbers.
+diffMaxMin([44, 32, 86, 19]) ➞ 67
+
+    function diffMaxMin(array) {
+        let Max = -123184;
+        let Min = 121646216;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > Max) {
+                Max = array[i];
+            }
+            if (array[i] < Min) {
+                Min = array[i]
+            }
+        }
+        return Max - Min;
+    }
+..........................................................................................................................
+Exercice14:
+Create a function that takes an array as argument and returns multiply all of the values in an array by the length of the given array.
+multiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0 ]
+multiplyByLength([4, 1, 1]) ➞ ([12, 3, 3])
+multiplyByLength([1, 0, 3, 3, 7, 2, 1]) ➞  [7, 0, 21, 21, 49, 14, 7]
+
+const differenceMaxMin = arr => Math.max(...arr) - Math.min(...arr);
+..........................................................................................................................
+Exercice15:
+Create a function takes an array of numbers, negate all elements contained within.
+Negating a positive value -+n will return -n, because all +'s are removed
+Negating a negative value --n will return n, because the first - turns the second minus into a +.
+negate([1, 2, 3, 4]) ➞ [-1, -2, -3, -4]
+negate([-1, 2, -3, 4]) ➞ [1, -2, 3, -4]
+                                              
+    function negate(array) {
+        let arr2 = [];
+        for (let i = 0; i < array.length; i++) {
+            arr2[i] = -array[i];
+        }
+        return arr2;
+    }
+..........................................................................................................................
+Exercice16:
+Create a function that takes an array of strings and returns the words that are exactly four letters.
+isFourLetters(["Tomato", "Potato", "Pair"]) ➞ ["Pair"]
+isFourLetters(["Kangaroo", "Bear", "Fox"]) ➞ ["Bear"]
+
+const isFourLetters = (arr) => {
+  return arr.filter( (word) => {
+    return word.length === 4;
+  })
+};
+..........................................................................................................................
+Exercice17:
+Create a function that takes an array ,a string and returns the addition of the string ending to each member in an array
+addEnding(["clever", "meek", "hurried"], "ly") ➞ ["cleverly", "meekly", "hurriedly"]
+addEnding(["new", "pander", "scoop"], "er") ➞ ["newer", "panderer", “scooper"]
+
+    function addEnding(array, ending) {
+        let arr2 = [];
+        for (let i = 0; i < array.length; i++) {
+            arr2.push(array[i] + ending)
+        }
+        return arr2;
+    }
+..........................................................................................................................
+Exercice18:
+Create a function to remove all null values from an array.
+removeNull(["a", null, "b", null]) ➞ ["a", "b"]
+removeNull([7, 8, null, 9]) ➞ [7, 8, 9]
+removeNull([null, null, null, null, null]) ➞ [ ]
+
+    function removeNull(array) {
+        return array.filter(el => el != null);
+}
+..........................................................................................................................
+Exercice19:
+Create a function that takes an array of numbers and remove any numbers that are divisible by 13,return the amended array.
+unlucky13([53, 182, 435, 591, 637]) ➞ [53, 435, 591]
+// 182 and 637 are divisible by 13.
+unlucky13([24, 316, 393, 458, 1279]) ➞ [24, 316, 393, 458, 1279]
+// No numbers in the array are divisible by 13.
+       
+const unlucky13 = nums => nums.filter(x => x % 13 !== 0);
+..........................................................................................................................
+Exercice20:
+Create a function that takes an array,return the incrementing (+1) for each odd number and decrementing (-1) for each even number.
+transform([1, 2, 3, 4, 5]) ➞ [2, 1, 4, 3, 6]
+transform([3, 3, 4, 3]) ➞ [4, 4, 3, 4]
+transform([2, 2, 0, 8, 10]) ➞ [1, 1, -1, 7, 9]
+                  
+    function transform(array) {
+        let arr = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                arr.push(array[i] - 1);
+            } else {
+                arr.push(array[i] + 1);
+            }
+        }
+        return arr;
+    }
+..........................................................................................................................
+Exercice21:
+Create a function that takes an array of non-negative numbers and strings and return a new array without the strings.Zero is a non-negative number
+filterArray([1, 2, "e", "f"]) ➞ [1, 2]
+filterArray([1, "s", "m", 0, 15]) ➞ [1, 0, 15]
+
+    function filterArray(array) {
+        return array.filter(el => typeof(el) === typeof(2))
+    }
+..........................................................................................................................
+Exercice22:
+A group of friends have decided to start a society. 
+The name will be the first letter of each of their names, sorted in alphabetical order.
+Create a function that takes in an array of names as argument and returns the name of the society.
+societyName(["Manel", "Sheima", "Amira"]) ➞ "AMS"
+societyName(["Saief", "Mouna", "Sirine"]) ➞ "SMS"
+                                     
+function societyName(friends) { 
+return friends.map(el => el[0])      
+   .sort()                            
+   .join("")                                                  
+}
+..........................................................................................................................
+Exercice23:
+Create a function that takes an array of arrays with numbers and return a new (single) array with the largest numbers of each.
+findLargestNums([[9, 2, 3, 1], [20, 70, 40, 90], [4, 2, 3]]) ➞ [9, 90,4]
+findLargestNums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]) ➞ [-34, -2, 7]
+        
+    function findLargestNums(array) {
+        let arr = [];
+        let max = -13154321161;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+
+            }
+            arr[i] = max;
+            max = -13154321161;
+        }
+        return arr;
+    }
+..........................................................................................................................
+Exercice24:
+Create a function that takes an array of strings and return an array, sorted from shortest to longest.
+shortToLong(["Google", "Apple", "Microsoft"])➞ ["Apple", "Google", "Microsoft"]
+shortToLong(["Simplon", "Skills", "Development"])➞ ["Skills", "Simplon","Development"]
+
+function sortByLength(arr) {
+		for (let L = 0; L < arr.length-1; L++){        // One and only for loop.
+			if (arr[L].length > arr[L+1].length)       // if param index is greater than other.
+				{
+					var x = arr[L+1];                   // short & sweet sort alg.
+					arr[L+1] = arr[L];
+					arr[L] = x;
+				}
+            }
+	return arr;                                 // RESULT RETURNED.
+};
+..........................................................................................................................
+Exercice25:
+Write two functions:
+toArray(), which converts a number to an array of its digits.
+toNumber(), which converts an array of digits back to its number.
+
+toArray(201) ➞ [2, 0, 1]
+toNumber([4, 8, 8]) ➞ 488
+toArray(7) ➞ [7]
+
+    function toArray(array) {
+        let arr = [];
+        let arr2 = array.toString().split('');
+        for (let i = 0; i < arr2.length; i++) {
+            arr.push(Number(arr2[i]));
+        }
+        return arr;
+    }
+
+function toNumber(array) {
+    return Number(array.join(''))
+}
+..........................................................................................................................
+Exercice26:
+Create a function which takes in a word and spells it out, by consecutively adding letters until the full word is completed.
+spelling("bee") ➞ ["b", "be", "bee"]
+spelling("happy") ➞ ["h", "ha", "hap", "happ", "happy"]
+
+function spelling(str) {
+    const countarr = str.split('')
+    console.log(countarr)
+
+    for (let i = 0; i < countarr.length; i++) {
+        var ar = countarr[i].slice(i, i + 1)
+        console.log(ar)
+    }
+}
+
+spelling("bee");
+..........................................................................................................................
+Exercice27:
+Write a function that converts an object into an array, where each element represents a key-value pair.
+toArray({ name: “saief”, age: 25 }) ➞ [["name", “saief”], ["age", 25]]
+toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+toArray({}) ➞ []
+
+function toArray(obj) {
+    let newArray = [];
+    for( let [key, value] of Object.entries(obj)) {
+        newArray.push([key,value]);
+    }
+    return newArray;
+}
+
+function toArray(obj) {
+	return Object.entries(obj);
+}
+
+function toArray(obj) {
+	return Object.keys(obj).map(x => [x, obj[x]]);
+}
+.............................................................................................................................................................................
+.............................................................................................................................................................................
+/**** Défi : Les Boocles ****\
+Exercice1:
+Create the function that takes an array with objects and returns the sum of people's 
+salary in society.
+
+getSalaries( [
+    { name: "Amira", age: 21, salary: 23000 },
+  { name: "Takwa",  age: 32, salary: 40000 },
+  { name: "Manel",  age: 16, salary: 2700 } ] ) ➞ 65700
+
+    function getSalaries(array) {
+        let s = 0;
+        for (let el of array) {
+            s += el.salary;
+        }
+        return s;
+    }
+..........................................................................................................................
+Exercice2:
+Create a function that takes an array as argument and returns the total number of arrays inside a given array.”just array”
+numOfSubbarrays([[1, 2, 3], ”bbvbx”, 2020]) ➞ 1
+numOfSubbarrays([“chaima”, ”Soltane”, [1, 2, 3], [1, 2, 3], [1, 2, 3]]) ➞ 3
+
+    function numOfSubbarrays(array) {
+        return array.filter(el => typeof(el) === typeof([])).length
+    }
+..........................................................................................................................
+Exercice3:
+Create a function that takes an array of objects as argument and returns an array of names
+([{ name: "Ahmed" },{ name: "Achref" },{ name: "Ayoub" }]) ➞ 
+  ["Ahmed", "Achref", "Ayoub"]
+
+    function arrayOfNames(array) {
+        return array.map(el => el.name)
+    }
+
+
 
