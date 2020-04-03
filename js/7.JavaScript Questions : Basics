@@ -4,7 +4,7 @@
 .A : function
 .B : var
 .C : const
-reponse: B et C
+reponse: A
 ......................................................................................
 # Q2  Inside which HTML element do we put the JavaScript?
 
